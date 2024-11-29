@@ -1,0 +1,21 @@
+Source: osrm-backend
+Maintainer: Frederik Ramm <ramm@geofabrik.de>
+Section: utils
+Priority: optional
+Build-Depends: debhelper (>= 9),
+               cmake,
+               libbz2-dev,
+               libxml2-dev,
+               libzip-dev,
+               libboost-all-dev,
+               lua5.2, 
+               liblua5.2-dev,
+               libtbb-dev
+Standards-Version: 4.4.1
+
+Package: osrm-backend
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Routing engine for OpenStreetMap
+ Provides routing with CH or MLD algorithms

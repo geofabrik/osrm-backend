@@ -1,0 +1,8 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0
+Upstream-Name: osrm-backend
+Source: https://github.com/project-osrm/openstreetmap-backend/releases
+
+Files: *
+Copyright: Copyright (c) 2017, Project OSRM contributors
+License: BSD
+

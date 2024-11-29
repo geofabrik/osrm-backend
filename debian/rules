@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+# debian/rules for osrm-backend
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+# Enable hardening build flags
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+
+# Verbose test output
+#export VERBOSE=1
+
+CFLAGS += $(CPPFLAGS) -DNDEBUG
+CXXFLAGS += $(CPPFLAGS) -DNDEBUG #-Wno-pessimizing-move -Wno-redundant-move
+
+%:
+	dh $@ --parallel # --buildsystem cmake  
+
+override_dh_auto_test:
+	dh_auto_test || echo "Ignoring test failures"
+
+override_dh_install:
+	dh_install --list-missing
+

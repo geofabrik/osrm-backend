@@ -1,0 +1,3 @@
+osrm-backend-dbgsym_5.27.1-3614af7_amd64.ddeb debug optional automatic=yes
+osrm-backend_5.27.1-3614af7_amd64.buildinfo utils optional
+osrm-backend_5.27.1-3614af7_amd64.deb utils optional
